@@ -2,11 +2,9 @@ package me.Funnygatt.GattSK.Managers;
 
 import ch.njol.skript.Skript;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.DisplaySlot;
-import org.bukkit.scoreboard.Objective;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.scoreboard.*;
 
 import java.util.HashMap;
 
@@ -116,6 +114,15 @@ public class ScoreboardManagers {
 		}
 	}
 
+	public static void unregisterObjective(String boardname, String name){
+		if (getBoard(boardname) != null) {
+			Scoreboard board = boardList.get(boardname);
+			board.getObjective(name).unregister();
+		}
+		else{
+			Skript.error(Skript.SKRIPT_PREFIX + "Tried to unregister an objective for a scoreboard that doesn't exist!");
+		}
+	}
 
 	//Possible syntax: objective %string (name)% from [score][board] %string (board)%
 	public static String getObjective(String boardname, String name){
@@ -173,4 +180,52 @@ public class ScoreboardManagers {
 		}
 	}
 
+	//TODO: Teams
+
+	public static void createTeam(String boardname, String teamName){
+		board = boardList.get(boardname);
+		board.registerNewTeam(teamName);
+	}
+
+	public static String getTeamS(String boardname, String teamName){
+		board = boardList.get(boardname);
+		return board.getTeam(teamName).toString();
+	}
+	public static Team getTeamActual(String boardname, String teamName){
+		board = boardList.get(boardname);
+		return board.getTeam(teamName);
+	}
+
+	public static void addPlayerToTeam(String boardname, String teamName, OfflinePlayer p){
+		Team team = getTeamActual(boardname, teamName);
+		team.addPlayer(p);
+	}
+
+	public static void removePlayerFromTeam(String boardname, String teamName, OfflinePlayer p){
+		Team team = getTeamActual(boardname, teamName);
+		team.removePlayer(p);
+	}
+
+	public static void clearPlayers(String boardname, String teamName){
+		Team team = getTeamActual(boardname, teamName);
+		for (OfflinePlayer p : team.getPlayers()) {
+			team.removePlayer(p);
+		}
+	}
+
+	public static void setTeamOption(String boardname, String teamName, String option, String stringValue, Boolean boolValue, Integer intValue){
+		Team team = getTeamActual(boardname, teamName);
+		if (option.equalsIgnoreCase("friendlyfire") || option.equalsIgnoreCase("friendly fire") || option.equalsIgnoreCase("can friendly fire")){
+			team.setAllowFriendlyFire(boolValue);
+		}
+		if (option.equalsIgnoreCase("prefix") || option.equalsIgnoreCase("team prefix")){
+			team.setPrefix(stringValue);
+		}
+		if (option.equalsIgnoreCase("suffix") || option.equalsIgnoreCase("team suffix")){
+			team.setSuffix(stringValue);
+		}
+		if (option.equalsIgnoreCase("see friendly invisibles") || option.equalsIgnoreCase("always see friendlies") || option.equalsIgnoreCase("Can See Friendly Invisibles")){
+			team.setCanSeeFriendlyInvisibles(boolValue);
+		}
+	}
 }
