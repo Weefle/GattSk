@@ -4,6 +4,7 @@ import ch.njol.skript.Skript;
 import ch.njol.skript.lang.ExpressionType;
 import me.Funnygatt.GattSK.BungeeCord.BCEffConnect;
 import me.Funnygatt.GattSK.Effects.Scoreboard.*;
+import me.Funnygatt.GattSK.Effects.World.*;
 import me.Funnygatt.GattSK.Expressions.*;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
