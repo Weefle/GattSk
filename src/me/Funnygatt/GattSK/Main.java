@@ -7,7 +7,7 @@ import me.Funnygatt.GattSK.Effects.General.*;
 import me.Funnygatt.GattSK.Effects.Scoreboard.*;
 import me.Funnygatt.GattSK.Effects.Scoreboard.SimpleScoreboards.*;
 import me.Funnygatt.GattSK.Effects.Scoreboard.Teams.*;
-import me.Funnygatt.GattSK.Effects.World.*;
+import me.Funnygatt.GattSK.Effects.World.EffCreateWorldFrom;
 import me.Funnygatt.GattSK.Expressions.*;
 import me.Funnygatt.GattSK.Expressions.ServerProperties.ExprMaxPlayers;
 import org.bukkit.Bukkit;

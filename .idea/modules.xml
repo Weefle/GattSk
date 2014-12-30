@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GattSK.iml" filepath="$PROJECT_DIR$/GattSK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GattSk.iml" filepath="$PROJECT_DIR$/GattSk.iml" />
       <module fileurl="file://$PROJECT_DIR$/SkBetterScoreboards.iml" filepath="$PROJECT_DIR$/SkBetterScoreboards.iml" />
     </modules>
   </component>
 </project>
-

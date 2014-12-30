@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="GattSK">
     <output-path>$PROJECT_DIR$/../../My Plugins</output-path>
     <root id="archive" name="GattSK.jar">
-      <element id="module-output" name="SkBetterScoreboards" />
+      <element id="module-output" name="GattSk" />
     </root>
   </artifact>
 </component>
