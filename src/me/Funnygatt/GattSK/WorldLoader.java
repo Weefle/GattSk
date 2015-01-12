@@ -12,10 +12,6 @@ public class WorldLoader {
 	File worldList;
 	CustomYML yml = Main.customYML;
 
-	void loadWorlds(){
-		yml.getCustomConfig().get;
-	}
-
 	void createWorldList(){
 		yml.saveCustomConfig();
 	}

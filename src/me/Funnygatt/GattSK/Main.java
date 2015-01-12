@@ -11,6 +11,7 @@ import me.Funnygatt.GattSK.Effects.World.EffCreateWorldFrom;
 import me.Funnygatt.GattSK.Expressions.*;
 import me.Funnygatt.GattSK.Expressions.ServerProperties.ExprMaxPlayers;
 import me.Funnygatt.GattSK.Utilities.CustomYML;
+import net.skquery.SkQuery;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.event.Listener;
@@ -34,15 +35,10 @@ public class Main extends JavaPlugin implements Listener{
 		WorldLoader wl = new WorldLoader();
 		wl.createWorldList();
 
+		SkQuery.transformElements();
+
 		//General
 
-		Skript.registerEffect(EffResetRecipes.class, "reset [all] [server] recipes");
-
-		Skript.registerEffect(EffGenerateChunk.class, "generate chunk at %location%");
-		Skript.registerEffect(EffLoadChunk.class, "load chunk at %location%");
-		Skript.registerEffect(EffUnloadChunk.class, "unload chunk at %location%");
-		Skript.registerEffect(EffSummonEffect.class, "(summon|play|create|activate|spawn) effect %string% at %locations%[[ with] data %integer%]");
-		Skript.registerEffect(EffUpdateInventory.class, "update %player% inventory");
 		Skript.registerEffect(EffRemoveExplodedBlock.class, "(remove|delete) %block% from [better][ ][new] exploded blocks");
 
 		//Scoreboards
