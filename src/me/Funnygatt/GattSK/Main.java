@@ -3,9 +3,8 @@ package me.Funnygatt.GattSK;
 import ch.njol.skript.Skript;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.skript.lang.ExpressionType;
-import me.Funnygatt.GattSK.Effects.General.*;
+import me.Funnygatt.GattSK.Effects.General.EffRemoveExplodedBlock;
 import me.Funnygatt.GattSK.Effects.Scoreboard.*;
-import me.Funnygatt.GattSK.Effects.Scoreboard.SimpleScoreboards.*;
 import me.Funnygatt.GattSK.Effects.Scoreboard.Teams.*;
 import me.Funnygatt.GattSK.Effects.World.EffCreateWorldFrom;
 import me.Funnygatt.GattSK.Expressions.*;
@@ -64,14 +63,6 @@ public class Main extends JavaPlugin implements Listener{
 		Skript.registerExpression(ExprGetObjectiveType.class, String.class, ExpressionType.PROPERTY, new String[] {"objective type of %string% (from|in) [score][board] %scoreboard%"});
 		Skript.registerExpression(ExprGetObjectiveDisplay.class, Objective.class, ExpressionType.PROPERTY, new String[] {"objective in [[display]slot] %displayslot% from [score][board] %string%"});
 		Skript.registerExpression(ExprGetObjective.class, String.class, ExpressionType.PROPERTY, new String[] {"objective %string% from [score][board] %string%"});
-
-		// Simple Scoreboards
-		Skript.registerEffect(EffNewSimpleScoreboard.class, "create [a] new simple scoreboard [named] %string%");
-		Skript.registerEffect(EffDebug.class, "debug simple %string%");
-		Skript.registerEffect(EffShowSimpleBoard.class, "set simple [score][ ][board] of %players% to %string%");
-		Skript.registerEffect(EffSetSimpleScore.class, "set (slot|value|score) %integer% of simple [score][ ][board] %string% to %string%");
-		Skript.registerEffect(EffSetSimpleScore.class, "(clear|delete) (slot|value|score) %integer% of simple [score][ ][board] %string%");
-		Skript.registerEffect(EffSimpleDisplayName.class, "set display title for simple [score][board] %string% to %string%");
 
 		//World Manager
 
