@@ -10,6 +10,7 @@ import me.Funnygatt.GattSK.Effects.Scoreboard.Teams.*;
 import me.Funnygatt.GattSK.Effects.World.EffCreateWorldFrom;
 import me.Funnygatt.GattSK.Expressions.*;
 import me.Funnygatt.GattSK.Expressions.ServerProperties.ExprMaxPlayers;
+import me.Funnygatt.GattSK.Utilities.CustomYML;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.event.Listener;
@@ -23,11 +24,15 @@ public class Main extends JavaPlugin implements Listener{
 	
 	public static PluginManager pm;
 	public static Plugin plugin;
+	public static CustomYML customYML;
 	
 	public void onEnable(){
 		pm = Bukkit.getPluginManager();
 		plugin = this;
 		Skript.registerAddon(this);
+
+		WorldLoader wl = new WorldLoader();
+		wl.createWorldList();
 
 		//General
 

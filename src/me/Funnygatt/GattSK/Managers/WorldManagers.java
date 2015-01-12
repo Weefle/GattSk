@@ -5,6 +5,8 @@ import me.Funnygatt.GattSK.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
+import org.bukkit.generator.ChunkGenerator;
+import org.bukkit.plugin.Plugin;
 
 import java.io.*;
 import java.util.regex.Matcher;
@@ -31,6 +33,34 @@ public class WorldManagers {
 			worldError();
 		}
 
+	}
+
+	public static void createWorldUsingGenerator(String name, String generatorName){
+		if (!worldExists(name)){
+			WorldCreator c = new WorldCreator(name);
+			c.generator(getGenerator(generatorName, name));
+			World world = c.createWorld();
+			lastCreatedWorld = Bukkit.getWorld(world.getName());
+		}
+		else{
+			error = "World already exists";
+			worldError();
+		}
+
+	}
+
+	static ChunkGenerator getGenerator(String generator, String name)
+	{
+		if(generator == null)
+		{
+			return null;
+		}
+		Plugin generatorPlugin = Bukkit.getPluginManager().getPlugin(generator);
+		if(generatorPlugin == null)
+		{
+			return null;
+		}
+		return generatorPlugin.getDefaultWorldGenerator(name, null);
 	}
 
 	public static void createWorldFrom(String name, String folderName){
@@ -170,7 +200,7 @@ public class WorldManagers {
 	}
 
 	public static void worldError(){
-		Skript.error(Skript.SKRIPT_PREFIX + "Error occured when WorldManager or something.. '" + error + "'");
+		Skript.error(Skript.SKRIPT_PREFIX + "Error occured within WorldManager'" + error + "'");
 	}
 
 }

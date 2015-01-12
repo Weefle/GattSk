@@ -1,0 +1,5 @@
+name: GattSK
+version: 3.0
+description: An addon for Skript which gives Scripters easier access to the Bukkit API
+author: Funnygatt
+main: me.Funnygatt.GattSK.Main

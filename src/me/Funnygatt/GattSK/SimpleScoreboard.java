@@ -130,13 +130,18 @@ public class SimpleScoreboard{
 		}
 	}
 
+	public static String colorString(String s)
+	{
+		return ChatColor.translateAlternateColorCodes('&', s);
+	}
+
 	public static void setScore(String scoreboardName, Integer slot, String value){
 		Scoreboard targetBoard = SimpleScoreboards.get(scoreboardName);
 		if (slot <= 15){
 			if (slot > 0){
 				//Bukkit.broadcastMessage("Score to Reset: " + null);
 				HashMap<Integer, String> hashMap = ScoreboardTracker.get(targetBoard);
-				if (hashMap.get(slot) != value){
+				if (hashMap.get(slot).toString() != value.toString()){
 					if (hashMap.containsKey(slot)) {
 						String score2reset = hashMap.get(slot);
 						//Bukkit.broadcastMessage("Score to Reset: " + score2reset);
