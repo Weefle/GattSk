@@ -1,5 +1,7 @@
 package me.Funnygatt.GattSK.Effects.General;
 
+import ch.njol.skript.entity.EntityData;
+import me.Funnygatt.GattSK.Utilities.ParabolicMotion;
 import net.minecraft.server.v1_8_R1.EntityInsentient;
 import net.minecraft.server.v1_8_R1.GenericAttributes;
 import net.skquery.api.annotation.LookThrough;
@@ -24,6 +26,20 @@ public class misc {
 //		}
 //	}
 	//TODO: Convert to SkQueryAPI once w00t tells me how to do this >.>
+
+	@ToSkript("(lob|shoot|launch) %entitydatas% from %location1% to %location2% with height gain of %gain%")
+	public static void shootParabolic(EntityData entitydatas, Location location1, Location location2, Integer gain){
+		Entity shootMe = entitydatas.spawn(location1);
+		shootMe.setVelocity(ParabolicMotion.calculateVelocity(location1.toVector(), location2.toVector(), gain, -99));
+	}
+
+	@ToSkript("set custom name of %entities% to %name%")
+	public static void setEntityHandle(Entity[] entities, String name){
+		for (Entity e : entities){
+			e.setCustomName(name);
+			e.setCustomNameVisible(true);
+		}
+	}
 
 	@ToSkript("set knockback resistance of %entities% to %integer%")
 	public static void setKnockbackResistance(Entity[] entities, Integer integer){

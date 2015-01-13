@@ -34,8 +34,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1462">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1462">
+              <caret line="62" column="99" selection-start-line="62" selection-start-column="98" selection-end-line="62" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -44,11 +44,23 @@
       <file leaf-file-name="misc.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/misc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17030114" vertical-offset="210" max-vertical-offset="1547">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.20560747" vertical-offset="346" max-vertical-offset="1853">
+              <caret line="32" column="118" selection-start-line="32" selection-start-column="118" selection-end-line="32" selection-end-column="118" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3167#3168#0" expanded="true" />
+                <element signature="e#3195#3196#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParabolicMotion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Utilities/ParabolicMotion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,16 +68,10 @@
       <file leaf-file-name="simpleScoreboardsMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/Scoreboard/SimpleScoreboards/simpleScoreboardsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="969">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1125#1126#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1887#1888#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +114,9 @@
         <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/ChunkRelated.java" />
         <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/EffSummonEffect.java" />
         <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/Scoreboard/SimpleScoreboards/simpleScoreboardsMain.java" />
-        <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java" />
         <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Utilities/GenericAttributes.java" />
+        <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java" />
+        <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Utilities/ParabolicMotion.java" />
         <option value="$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/misc.java" />
       </list>
     </option>
@@ -176,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -378,6 +384,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -747,12 +754,13 @@
       <workItem from="1420537691062" duration="671000" />
       <workItem from="1420589958759" duration="602000" />
       <workItem from="1421042645771" duration="5650000" />
-      <workItem from="1421061820123" duration="218000" />
+      <workItem from="1421061820123" duration="934000" />
+      <workItem from="1421098889354" duration="4319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113540000" />
+    <option name="totallyTimeSpent" value="118575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -847,6 +855,36 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/misc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1547">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3195#3196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/Scoreboard/SimpleScoreboards/simpleScoreboardsMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="969">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1462">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
@@ -859,6 +897,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3195#3196#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,12 +909,6 @@
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1143,6 +1177,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
           <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,9 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,36 +1210,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/Scoreboard/EffCreateWorldFrom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12357217" vertical-offset="0" max-vertical-offset="963">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1462">
+          <caret line="62" column="99" selection-start-line="62" selection-start-column="98" selection-end-line="62" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/Scoreboard/SimpleScoreboards/simpleScoreboardsMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Utilities/ParabolicMotion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1462">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/Funnygatt/GattSK/Effects/General/misc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17030114" vertical-offset="210" max-vertical-offset="1547">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.20560747" vertical-offset="346" max-vertical-offset="1853">
+          <caret line="32" column="118" selection-start-line="32" selection-start-column="118" selection-end-line="32" selection-end-column="118" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3195#3196#0" expanded="true" />
           </folding>
         </state>
       </provider>
