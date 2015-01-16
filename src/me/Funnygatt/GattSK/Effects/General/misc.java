@@ -41,6 +41,14 @@ public class misc {
 		}
 	}
 
+	@ToSkript("set visibility state of %entities% to %value%")
+	public static void setRandom(Entity[] entities, Boolean value){
+		for (Entity e : entities){
+			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
+			nmsEntity.setInvisible(value);
+		}
+	}
+
 	@ToSkript("set knockback resistance of %entities% to %integer%")
 	public static void setKnockbackResistance(Entity[] entities, Integer integer){
 		for (Entity e : entities){

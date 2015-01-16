@@ -2,6 +2,7 @@ package me.Funnygatt.GattSK.Managers;
 
 import ch.njol.skript.Skript;
 import me.Funnygatt.GattSK.Main;
+import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
@@ -75,8 +76,8 @@ public class WorldManagers {
 			else {
 
 				try{
-					net.minecraft.util.org.apache.commons.io.FileUtils.deleteDirectory(destFolder);
-					net.minecraft.util.org.apache.commons.io.FileUtils.copyDirectory(srcFolder, destFolder);
+					FileUtils.deleteDirectory(destFolder);
+					FileUtils.copyDirectory(srcFolder, destFolder);
 				}catch(IOException e){
 					e.printStackTrace();
 					//error, just exit
