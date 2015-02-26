@@ -13,8 +13,11 @@ import me.Funnygatt.GattSK.Utilities.CustomYML;
 import net.skquery.SkQuery;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,10 +32,8 @@ public class Main extends JavaPlugin implements Listener{
 	public void onEnable(){
 		pm = Bukkit.getPluginManager();
 		plugin = this;
-		Skript.registerAddon(this);
 
-		WorldLoader wl = new WorldLoader();
-		wl.createWorldList();
+		Bukkit.getPluginManager().registerEvents(this, this);
 
 		SkQuery.transformElements();
 
@@ -93,6 +94,11 @@ public class Main extends JavaPlugin implements Listener{
 		//Bukkit Server Properties
 		Skript.registerExpression(ExprMaxPlayers.class, Integer.class, ExpressionType.SIMPLE, new String[]{"max players"});
 
+	}
+
+	@EventHandler
+	public void onSpawn(CreatureSpawnEvent e){
+		e.getEntity().setMetadata("spawnreason", new FixedMetadataValue(plugin, e.getSpawnReason()));
 	}
 
 }

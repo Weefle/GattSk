@@ -21,7 +21,7 @@ public class ExprClickedSlot extends SimpleExpression<Integer> {
 
 	public boolean isSingle()
 	{
-		return false;
+		return true;
 	}
 
 	public Class<? extends Integer> getReturnType()

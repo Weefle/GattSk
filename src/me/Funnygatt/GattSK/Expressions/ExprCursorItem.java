@@ -22,7 +22,7 @@ public class ExprCursorItem extends SimpleExpression<ItemStack> {
 
 	public boolean isSingle()
 	{
-		return false;
+		return true;
 	}
 
 	public Class<? extends ItemStack> getReturnType()

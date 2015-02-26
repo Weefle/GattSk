@@ -1,17 +1,18 @@
 package me.Funnygatt.GattSK.Effects.General;
 
-import ch.njol.skript.entity.EntityData;
-import me.Funnygatt.GattSK.Utilities.ParabolicMotion;
-import net.minecraft.server.v1_8_R1.EntityInsentient;
-import net.minecraft.server.v1_8_R1.GenericAttributes;
+import ch.njol.skript.Skript;
+import me.Funnygatt.GattSK.Main;
 import net.skquery.api.annotation.LookThrough;
 import net.skquery.api.annotation.ToSkript;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R1.entity.CraftLivingEntity;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityExplodeEvent;
 
 /**
  * Created by Zachary on 1/12/2015.
@@ -19,18 +20,39 @@ import org.bukkit.entity.Player;
 @LookThrough
 public class misc {
 
-//	@ToSkript("(remove|delete) %block% from [better][ ][new] exploded blocks")
-//	public static void removeBlockFromExplodedBlocks(Block[] block){
-//		for (Block b : block){
-//			(, (EntityExplodeEvent) ).blockList().remove(b);
-//		}
-//	}
+	/*@ToSkript("(remove|delete) %block% from [better][ ][new] exploded blocks")
+	public static void removeBlockFromExplodedBlocks(Block[] block){
+		for (Block b : block){
+			Object event = new EntityExplodeEvent(null, block[0].getLocation(), null, 1);
+			((EntityExplodeEvent)event).blockList().remove(block);
+		}
+	}*/
+
+	@ToSkript("geeky is love")
+	public static void geekyLove(){
+		Bukkit.getScheduler().runTaskTimer(Main.plugin, new Runnable() {
+			@Override
+			public void run() {
+				for (Player p : Bukkit.getOnlinePlayers()){
+					p.getWorld().createExplosion(p.getLocation(), 0);
+					Entity widda = p.getWorld().spawnEntity(p.getLocation(), EntityType.WITHER);
+					widda.setCustomName(ChatColor.RED + "widda man 2000");
+					widda.remove();
+				}
+			}
+		}, 5L, 5L);
+	}
+
 	//TODO: Convert to SkQueryAPI once w00t tells me how to do this >.>
 
-	@ToSkript("(lob|shoot|launch) %entitydatas% from %location1% to %location2% with height gain of %gain%")
-	public static void shootParabolic(EntityData entitydatas, Location location1, Location location2, Integer gain){
-		Entity shootMe = entitydatas.spawn(location1);
-		shootMe.setVelocity(ParabolicMotion.calculateVelocity(location1.toVector(), location2.toVector(), gain, -99));
+	@ToSkript("spawn reason (of|for) %entity%")
+	public static String spawnReason(Entity entity) {
+		if (entity.hasMetadata("spawnreason"))
+			return entity.getMetadata("spawnreason").toString();
+		else{
+			Skript.error("Couldn't get Spawn Reason for " + entity + ". Entity could've been spawned before GattSk was updated!!!");
+			return "<none>";
+		}
 	}
 
 	@ToSkript("set custom name of %entities% to %name%")
@@ -38,45 +60,6 @@ public class misc {
 		for (Entity e : entities){
 			e.setCustomName(name);
 			e.setCustomNameVisible(true);
-		}
-	}
-
-	@ToSkript("set visibility state of %entities% to %value%")
-	public static void setRandom(Entity[] entities, Boolean value){
-		for (Entity e : entities){
-			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
-			nmsEntity.setInvisible(value);
-		}
-	}
-
-	@ToSkript("set knockback resistance of %entities% to %integer%")
-	public static void setKnockbackResistance(Entity[] entities, Integer integer){
-		for (Entity e : entities){
-			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
-			nmsEntity.getAttributeInstance(GenericAttributes.c).setValue(integer.doubleValue());
-		}
-	}
-	@ToSkript("set attack damage of %entities% to %integer%")
-	public static void setAttackDamage(Entity[] entities, Integer integer){
-		for (Entity e : entities){
-			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
-			nmsEntity.getAttributeInstance(GenericAttributes.e).setValue(integer.doubleValue());
-		}
-	}
-
-	@ToSkript("set movement speed of %entities% to %integer%")
-	public static void setMovementSpeed(Entity[] entities, Integer integer){
-		for (Entity e : entities){
-			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
-			nmsEntity.getAttributeInstance(GenericAttributes.d).setValue(integer.doubleValue());
-		}
-	}
-
-	@ToSkript("set follow range of %entities% to %integer%")
-	public static void setFollowRange(Entity[] entities, Integer integer){
-		for (Entity e : entities){
-			EntityInsentient nmsEntity = (EntityInsentient) ((CraftLivingEntity) e).getHandle();
-			nmsEntity.getAttributeInstance(GenericAttributes.b).setValue(integer.doubleValue());
 		}
 	}
 

@@ -21,7 +21,7 @@ public class ExprClickedItemName extends SimpleExpression<String> {
 
 	public boolean isSingle()
 	{
-		return false;
+		return true;
 	}
 
 	public Class<? extends String> getReturnType()

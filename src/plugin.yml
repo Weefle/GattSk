@@ -1,5 +1,6 @@
 name: GattSK
-version: 4.0
+version: 4.1
 description: An addon for Skript which gives Scripters easier access to the Bukkit API
 author: Funnygatt
 main: me.Funnygatt.GattSK.Main
+depend: [SkQueryAPIONLY, Skript]
