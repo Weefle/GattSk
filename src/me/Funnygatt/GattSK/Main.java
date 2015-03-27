@@ -90,11 +90,12 @@ public class Main extends JavaPlugin implements Listener{
 
 		SimplePropertyExpression.register(ExprSkullDisplay.class, String.class, "skull owner", "block");
 
-
 		//Bukkit Server Properties
 		Skript.registerExpression(ExprMaxPlayers.class, Integer.class, ExpressionType.SIMPLE, new String[]{"max players"});
 
 	}
+
+
 
 	@EventHandler
 	public void onSpawn(CreatureSpawnEvent e){
